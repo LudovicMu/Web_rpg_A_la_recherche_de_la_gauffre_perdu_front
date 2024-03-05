@@ -1,0 +1,15 @@
+@use "src/styles/Variables.scss" as v;
+
+.home__Contact {
+  margin-top: 5em;
+  background-color: v.$transparency-color;
+  padding: 1em;
+  color: v.$primary-color;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  filter: drop-shadow(0 0 1em v.$text-color);
+}

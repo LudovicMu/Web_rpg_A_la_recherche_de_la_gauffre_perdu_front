@@ -1,0 +1,103 @@
+@use "src/styles/Variables.scss" as v;
+
+.register {
+  background-color: v.$lighter-color;
+  position: absolute;
+  top: calc(50% - 15em);
+  left: calc(50% - 30em);
+  width: 60em;
+  max-width: 60em;
+  height: 30em;
+  max-height: 30em;
+  border-radius: 50px;
+  border: 1px solid v.$border-color;
+  z-index: 10;
+
+  &__title {
+    color: v.$text-color;
+    padding-top: 1em;
+    padding-left: 2em;
+  }
+
+  &__logInClose {
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    padding: 2em;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__form {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      & > input[type="submit"] {
+        background-color: v.$primary-color;
+        border: 1px solid v.$border-color;
+        height: 60px;
+        width: 200px;
+        border-radius: 0.75em;
+        margin-top: 50px;
+        font-family: "PixeloidMono";
+      }
+      & > input[type="submit"]:hover {
+        background-color: v.$secondary-color;
+        border: 1px solid v.$border-color;
+        color: v.$primary-color;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      & > input {
+        height: 50px;
+      }
+    }
+  }
+}
+
+.input__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  gap: 15px;
+  background-color: v.$secondary-color;
+  border: 1px solid v.$border-color;
+  width: 375px;
+  height: 45px;
+  border-radius: 20px;
+  color: v.$text-color;
+
+  & > input {
+    height: 20px;
+    color: v.$text-color;
+    border: 1px solid v.$complementary-color;
+    background-color: v.$primary-color;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin: -12px 0;
+  font-family: "PixeloidMono";
+}

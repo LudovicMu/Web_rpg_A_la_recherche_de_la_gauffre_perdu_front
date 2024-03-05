@@ -1,0 +1,118 @@
+@use "src/styles/Variables.scss" as v;
+
+.tablePlayers {
+  margin-top: 1.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  background-color: v.$primary-color;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid v.$lighter-color;
+  width: 90em;
+
+  &__headTable {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    &__pseudo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 20em;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      &__icon {
+        width: 1.5em;
+      }
+    }
+
+    &__Email {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 30em;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      &__icon {
+        width: 1.5em;
+      }
+    }
+
+    &__name {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 30em;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      &__icon {
+        width: 1.5em;
+      }
+    }
+
+    &__gestion {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+
+  &__entryTable {
+    display: flex;
+    flex-direction: row;
+    color: grey;
+    width: 100%;
+
+    &__pseudo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 20em;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      border-top: 2px solid v.$lighter-color;
+    }
+
+    &__Email {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 30em;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      border-top: 2px solid v.$lighter-color;
+    }
+
+    &__name {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 30em;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      border-top: 2px solid v.$lighter-color;
+    }
+
+    &__gestion {
+      padding-left: 1em;
+      padding-right: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 4.85em;
+      border-top: 2px solid v.$lighter-color;
+    }
+  }
+}

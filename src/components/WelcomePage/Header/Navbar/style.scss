@@ -1,0 +1,11 @@
+@use "src/styles/Variables.scss" as v;
+
+.navlink {
+  color: v.$text-color;
+  &[class~="active"] {
+    background-color: v.$complementary-color;
+  }
+}
+.navlink:hover {
+  color: v.$secondary-color;
+}

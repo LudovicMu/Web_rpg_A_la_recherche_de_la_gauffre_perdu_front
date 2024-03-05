@@ -1,0 +1,52 @@
+@use "src/styles/Variables.scss" as v;
+
+.choosePath {
+  background-color: v.$lighter-color;
+  border: 1px solid v.$border-color;
+  position: absolute;
+  top: calc(50% - 15em);
+  left: calc(50% - 30em);
+  width: 60em;
+  height: 30em;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: v.$text-color;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+
+    &__buttonsContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+
+      &__explainer {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 30%;
+        color: v.$text-color;
+
+        & > button {
+          background-color: v.$primary-color;
+        }
+        & > button:hover {
+          background-color: v.$secondary-color;
+          color: v.$primary-color;
+          border: 1px solid v.$border-color;
+        }
+      }
+    }
+  }
+}

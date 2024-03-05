@@ -1,0 +1,185 @@
+@use "src/styles/Variables.scss" as v;
+
+.combat {
+  background-image: url("/src/assets/hallway.jpg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 100vh;
+  background-color: v.$lighter-color;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__scene {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60vh;
+    align-items: center;
+    gap: 20px;
+    color: v.$primary-color;
+    &__hero {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__heroAvatar {
+        width: 25em;
+        margin-top: 4em;
+      }
+      &__actualHp {
+        width: 14em;
+        border-radius: 0.5em;
+
+        text-align: center;
+      }
+    }
+    &__ennemie {
+      text-align: center;
+      &__actualHp {
+        width: 14em;
+        border-radius: 0.5em;
+        margin-bottom: 1em;
+        text-align: center;
+      }
+    }
+  }
+
+  &__buttonContainer {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    gap: 15px;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 15px;
+      width: 100%;
+
+      & > button {
+        background-color: v.$complementary-color;
+        background-color: v.$primary-color;
+        padding: 1em;
+        width: 100%;
+        border-top-right-radius: 3em;
+        border-bottom-right-radius: 3em;
+        font-size: 2em;
+        text-align: left;
+        border-top: 1px solid v.$border-color;
+        border-bottom: 1px solid v.$border-color;
+        border-right: 1px solid v.$border-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        & > img {
+          width: 2em;
+          margin-right: 1em;
+        }
+      }
+      & > button:hover {
+        background-color: v.$secondary-color;
+        color: v.$primary-color;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      width: 100%;
+
+      & > button {
+        background-color: v.$primary-color;
+        padding: 1em;
+        width: 100%;
+        border-top-left-radius: 3em;
+        border-bottom-left-radius: 3em;
+        font-size: 2em;
+        text-align: right;
+        border-top: 1px solid v.$border-color;
+        border-bottom: 1px solid v.$border-color;
+        border-left: 1px solid v.$border-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        & > img {
+          width: 2em;
+          margin-right: 1em;
+        }
+      }
+      & > button:hover {
+        background-color: v.$secondary-color;
+        color: v.$primary-color;
+      }
+    }
+  }
+}
+
+.combatPopup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: v.$lighter-color;
+  padding: 2em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  color: black;
+  &__title {
+    font-size: 2em;
+  }
+  &__button {
+    background-color: v.$primary-color;
+    padding: 1em;
+    width: 100%;
+    border-radius: 3em;
+    font-size: 2em;
+    text-align: center;
+    border: 1px solid v.$border-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button:hover {
+    background-color: v.$secondary-color;
+    color: v.$primary-color;
+  }
+}
+
+.ennemyTurnPopup{
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: v.$lighter-color;
+  padding: 2em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  color: black;
+  width: 90%;
+  height: 15%;
+}

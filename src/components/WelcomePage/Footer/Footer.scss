@@ -1,0 +1,20 @@
+@use "src/styles/Variables.scss" as v;
+
+.footer {
+  background: v.$lighter-color;
+  color: v.$text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 4rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &__copyright {
+    padding-right: 50px;
+  }
+}

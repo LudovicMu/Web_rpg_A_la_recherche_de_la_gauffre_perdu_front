@@ -1,0 +1,164 @@
+@use "src/styles/Variables.scss" as v;
+
+.tableMonsters {
+  margin-top: 1.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  background-color: v.$primary-color;
+  display: flex;
+  flex-direction: column;
+  width: 90em;
+  border: 2px solid v.$lighter-color;
+  &__headTable {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    &__monster {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 30%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      &__icon {
+        width: 1.5em;
+      }
+    }
+
+    &__PV {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 15%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      &__icon {
+        width: 1.5em;
+      }
+    }
+
+    &__degPhys {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 15%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      &__icon {
+        width: 1.5em;
+      }
+    }
+
+    &__degMag {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 15%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      &__icon {
+        width: 1.5em;
+      }
+    }
+
+    &__run {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 7%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+      &__icon {
+        width: 1.5em;
+      }
+    }
+
+    &__gestion {
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 8%;
+    }
+  }
+
+  &__entryTable {
+    display: flex;
+    flex-direction: row;
+    color: grey;
+    width: 100%;
+    border-top: 1px solid v.$lighter-color;
+    &__monster {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 30%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+    }
+
+    &__PV {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 15%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+    }
+
+    &__degPhys {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 15%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+    }
+
+    &__degMag {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 15%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+    }
+
+    &__run {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 7%;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-right: 2px solid v.$lighter-color;
+    }
+
+    &__gestion {
+      padding-left: 1em;
+      padding-right: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 8%;
+    }
+  }
+}

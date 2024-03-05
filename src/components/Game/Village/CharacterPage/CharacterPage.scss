@@ -1,0 +1,599 @@
+@use "src/styles/Variables.scss" as v;
+
+.popupCharacterPage {
+  z-index: 5;
+  background-color: v.$secondary-color;
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  width: 80vw;
+  height: 90vh;
+  border: 1px solid v.$border-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__headCharacter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__returnTown {
+      background-color: v.$lighter-color;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 1em;
+      width: 17em;
+      border-radius: 0.75em;
+      border: 1px solid v.$border-color;
+
+      &__titleReturn {
+        color: v.$primary-color;
+        color: v.$text-color;
+      }
+    }
+    &__returnTown:hover {
+      background-color: v.$complementary-color;
+      transition-duration: 0.5s;
+    }
+    &__returnTown.react:hover {
+      background-color: v.$complementary-color;
+      transition-duration: 0.5s;
+    }
+    &__nameCharacter {
+      background-color: v.$lighter-color;
+      font-size: 2em;
+      width: 17em;
+      border-bottom-left-radius: 3em;
+      border-bottom-right-radius: 3em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 3em;
+      border-bottom: 1px solid v.$border-color;
+      border-left: 1px solid v.$border-color;
+      border-right: 1px solid v.$border-color;
+    }
+
+    &__returnShop {
+      background-color: v.$lighter-color;
+      color: v.$text-color;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 1em;
+      width: 17em;
+      border-radius: 0.75em;
+      border: 1px solid v.$border-color;
+
+      &__titleShop {
+        color: v.$primary-color;
+        color: v.$text-color;
+      }
+    }
+    &__returnShop:hover {
+      background-color: v.$complementary-color;
+      transition-duration: 0.5s;
+    }
+    &__returnShop.react:hover {
+      background-color: v.$complementary-color;
+      transition-duration: 0.5s;
+    }
+  }
+
+  &__characterBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+    margin-top: 2em;
+
+    &__loreContainer {
+      background-color: v.$lighter-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20em;
+      border-radius: 12em;
+
+      margin-top: 3em;
+      margin-left: 1em;
+      height: 32em;
+      border: 1px solid v.$border-color;
+
+      &__avatar {
+        margin-top: 2em;
+        background-color: v.$primary-color;
+        width: 8em;
+        padding: 1em;
+        border-radius: 5em;
+        margin-bottom: 1em;
+      }
+
+      &__moralBar {
+        width: 10em;
+        border-radius: 1em;
+        margin-bottom: 1em;
+      }
+
+      &__background {
+        font-size: 1.3em;
+        margin: 0;
+      }
+      &__lore {
+        width: 15em;
+      }
+    }
+
+    &__secondaryStats {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1em;
+      align-items: center;
+
+      &__statBar {
+        background-color: v.$lighter-color;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: row;
+        width: 28em;
+        justify-content: space-around;
+        border-top-left-radius: 3em;
+        border-top-right-radius: 3em;
+        border-left: 1px solid v.$border-color;
+        border-right: 1px solid v.$border-color;
+        border-top: 1px solid v.$border-color;
+      }
+
+      &__pv {
+        background-color: v.$primary-color;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 6em;
+        width: 40em;
+        border-radius: 3em;
+        border: 1px solid v.$border-color;
+        margin-bottom: 1em;
+
+        &__icon {
+          margin-left: 1em;
+          width: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+        }
+        &__stat {
+          margin-left: 1em;
+          margin-right: 4em;
+          font-size: 2em;
+          color: v.$secondary-color;
+        }
+        &__base {
+          font-size: 2em;
+          width: 1.8em;
+          height: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 0.1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-right: 3.5em;
+        }
+        &__bonus {
+          font-size: 2em;
+          width: 1.8em;
+          height: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 0.1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &__atk {
+        background-color: v.$primary-color;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 6em;
+        width: 40em;
+        border-radius: 3em;
+        border: 1px solid v.$border-color;
+        margin-bottom: 1em;
+
+        &__icon {
+          margin-left: 1em;
+          width: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+        }
+        &__stat {
+          margin-left: 1em;
+          margin-right: 3.4em;
+          font-size: 2em;
+          color: v.$secondary-color;
+        }
+        &__base {
+          font-size: 2em;
+          width: 1.8em;
+          height: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 0.1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-right: 3.5em;
+        }
+        &__bonus {
+          font-size: 2em;
+          width: 1.8em;
+          height: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 0.1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &__mgi {
+        background-color: v.$primary-color;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 6em;
+        width: 40em;
+        border-radius: 3em;
+        border: 1px solid v.$border-color;
+        margin-bottom: 1em;
+
+        &__icon {
+          margin-left: 1em;
+          width: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+        }
+        &__stat {
+          margin-left: 1em;
+          margin-right: 3.4em;
+          font-size: 2em;
+          color: v.$secondary-color;
+        }
+        &__base {
+          font-size: 2em;
+          width: 1.8em;
+          height: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 0.1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-right: 3.5em;
+        }
+        &__bonus {
+          font-size: 2em;
+          width: 1.8em;
+          height: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 0.1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &__crit {
+        background-color: v.$primary-color;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 6em;
+        width: 40em;
+        border-radius: 3em;
+        border: 1px solid v.$border-color;
+        margin-bottom: 1em;
+
+        &__icon {
+          margin-left: 1em;
+          width: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+        }
+        &__stat {
+          margin-left: 1em;
+          margin-right: 2.8em;
+          font-size: 2em;
+          color: v.$secondary-color;
+        }
+        &__base {
+          font-size: 2em;
+          width: 1.8em;
+          height: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 0.1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-right: 3.5em;
+        }
+        &__bonus {
+          font-size: 2em;
+          width: 1.8em;
+          height: 1.8em;
+          background-color: v.$complementary-color;
+          padding: 0.1em;
+          border-radius: 3em;
+          border: 2px solid v.$secondary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    &__mainStats {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      margin-left: 1.1em;
+
+      &__currentClass {
+        background-color: v.$primary-color;
+        width: 15em;
+        padding-left: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid v.$border-color;
+        border-top: 1px solid v.$border-color;
+        border-left: 1px solid v.$border-color;
+        border-top-left-radius: 3em;
+        border-bottom-left-radius: 3em;
+      }
+
+      &__mainCarac {
+        margin-top: 1.8em;
+        margin-right: 0.5em;
+
+        &__for {
+          background-color: v.$primary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-evenly;
+          height: 6em;
+          width: 20em;
+          border-radius: 3em;
+          border: 1px solid v.$border-color;
+          margin-bottom: 1em;
+
+          &__icon {
+            width: 1.8em;
+            background-color: v.$complementary-color;
+            padding: 1em;
+            border-radius: 3em;
+            border: 2px solid v.$secondary-color;
+          }
+          &__stat {
+            margin-left: 1em;
+            margin-right: 1em;
+            font-size: 2em;
+            color: v.$secondary-color;
+          }
+          &__base {
+            font-size: 2em;
+            width: 1.8em;
+            height: 1.8em;
+            background-color: v.$complementary-color;
+            padding: 0.1em;
+            border-radius: 3em;
+            border: 2px solid v.$secondary-color;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        &__dex {
+          background-color: v.$primary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-evenly;
+          height: 6em;
+          width: 20em;
+          border-radius: 3em;
+          border: 1px solid v.$border-color;
+          margin-bottom: 1em;
+
+          &__icon {
+            width: 1.8em;
+            background-color: v.$complementary-color;
+            padding: 1em;
+            border-radius: 3em;
+            border: 2px solid v.$secondary-color;
+          }
+          &__stat {
+            margin-left: 1em;
+            margin-right: 1em;
+            font-size: 2em;
+            color: v.$secondary-color;
+          }
+          &__base {
+            font-size: 2em;
+            width: 1.8em;
+            height: 1.8em;
+            background-color: v.$complementary-color;
+            padding: 0.1em;
+            border-radius: 3em;
+            border: 2px solid v.$secondary-color;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        &__int {
+          background-color: v.$primary-color;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-evenly;
+          height: 6em;
+          width: 20em;
+          border-radius: 3em;
+          border: 1px solid v.$border-color;
+          margin-bottom: 1em;
+
+          &__icon {
+            width: 1.8em;
+            background-color: v.$complementary-color;
+            padding: 1em;
+            border-radius: 3em;
+            border: 2px solid v.$secondary-color;
+          }
+          &__stat {
+            margin-left: 1em;
+            margin-right: 1em;
+            font-size: 2em;
+            color: v.$secondary-color;
+          }
+          &__base {
+            font-size: 2em;
+            width: 1.8em;
+            height: 1.8em;
+            background-color: v.$complementary-color;
+            padding: 0.1em;
+            border-radius: 3em;
+            border: 2px solid v.$secondary-color;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  &__equipmentSection {
+    margin-top: 4em;
+    background-color: v.$lighter-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50em;
+    height: 10em;
+    border-radius: 10em;
+    border: 1px solid v.$border-color;
+
+    &__equipTitle {
+      background-color: v.$complementary-color;
+      width: 15em;
+      padding: 0.25em;
+      border-radius: 3em;
+      border: 1px solid v.$secondary-color;
+      align-self: flex-start;
+      margin-left: 4em;
+    }
+    &__weapon {
+      background-color: v.$primary-color;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 2em;
+      padding-right: 2em;
+      width: 35em;
+      height: 2.5em;
+      border-radius: 3em;
+
+      &__weaponTitle {
+        color: v.$secondary-color;
+      }
+
+      &__rarity {
+        color: v.$rarityRare-color;
+      }
+    }
+    &__armor {
+      background-color: v.$primary-color;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 2em;
+      padding-right: 2em;
+      width: 35em;
+      height: 2.5em;
+      border-radius: 3em;
+
+      &__armorTitle {
+        color: v.$secondary-color;
+      }
+
+      &__rarity {
+        color: v.$rarityRare-color;
+      }
+    }
+  }
+
+  &__helpSection {
+    background-color: v.$complementary-color;
+    width: 5em;
+    padding: 1em;
+    border-radius: 4em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1em;
+  }
+  &__helpSection:hover {
+    filter: drop-shadow(0 0 0.5em v.$primary-color);
+    background-color: v.$lighter-color;
+    transition-duration: 0.5s;
+  }
+  &__helpSection.react:hover {
+    filter: drop-shadow(0 0 0.5em v.$primary-color);
+    background-color: v.$lighter-color;
+    transition-duration: 0.5s;
+  }
+}

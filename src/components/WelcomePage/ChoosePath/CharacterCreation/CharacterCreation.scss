@@ -1,0 +1,162 @@
+@use "src/styles/Variables.scss" as v;
+
+.creation {
+  width: 55vw;
+  max-width: 55vw;
+  height: 70vh;
+  max-height: 70vh;
+  background-color: v.$lighter-color;
+  border-radius: 2em;
+  border: 1px solid v.$border-color;
+  position: absolute;
+  left: 27.5%;
+  top: 15%;
+  color: v.$text-color;
+  z-index: 10;
+
+  &__Head {
+    background-color: v.$primary-color;
+    border: 1px solid v.$border-color;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1em;
+    gap: 1em;
+    width: 65%;
+    border-radius: 5em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 2em;
+  }
+
+  &__Body {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+
+    &__descriptionContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 40%;
+      background-color: v.$primary-color;
+      border-radius: 1em;
+      border: 1px solid v.$border-color;
+      margin-left: 1em;
+
+      &__classImage {
+        width: 60%;
+      }
+
+      &__descriptionText {
+        padding-left: 1em;
+        padding-right: 1em;
+        color: v.$text-color;
+      }
+    }
+
+    &__creationContainer {
+      margin-bottom: 1.5em;
+      background-color: v.$secondary-color;
+      width: 30em;
+      height: 5em;
+      border-radius: 5em;
+      border: 1px solid v.$border-color;
+
+      &__nameTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        &__nameSubTitle {
+          color: v.$text-color;
+          margin: 0;
+          text-align: start;
+          padding-top: 0.5em;
+          padding-left: 2em;
+          padding-bottom: 0.5em;
+        }
+
+        &__nameInput {
+          background-color: v.$primary-color;
+          border: 1px solid v.$complementary-color;
+          color: v.$lighter-color;
+          border-radius: 0.2em;
+          margin-left: 3em;
+        }
+      }
+
+      &__classSelector {
+        margin-top: 2em;
+        width: 30em;
+        height: 15em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+
+        &__warrior {
+          width: 33%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: v.$primary-color;
+          border: 1px solid v.$border-color;
+        }
+
+        &__rogue {
+          width: 33%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: v.$primary-color;
+          border: 1px solid v.$border-color;
+        }
+
+        &__mage {
+          width: 33%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: v.$primary-color;
+          border: 1px solid v.$border-color;
+        }
+      }
+
+      &__endCreation {
+        margin-top: 4em;
+        background-color: v.$primary-color;
+        width: 12em;
+        height: 5em;
+        border-radius: 5em;
+        border: 1px solid v.$border-color;
+      }
+      &__endCreation:hover {
+        background-color: v.$secondary-color;
+        color: v.$primary-color;
+        border: 1px solid v.$border-color;
+      }
+    }
+  }
+}
+
+//---------------------------- Laissés de coté volontairement, iconClass est commun aux trois classes Warrior, Rogue, Mage -----------------------
+.iconClass {
+  width: 3em;
+  margin-top: 1em;
+  border-radius: 2em;
+  border: 1px solid v.$border-color;
+  background-color: v.$complementary-color;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  display: flex;
+  align-items: center;
+}
+.iconClass:hover {
+  filter: drop-shadow(0 0 0.5em v.$secondary-color);
+  background-color: v.$secondary-color;
+}
+.iconClass.react:hover {
+  filter: drop-shadow(0 0 2em v.$secondary-color);
+  background-color: v.$secondary-color;
+}

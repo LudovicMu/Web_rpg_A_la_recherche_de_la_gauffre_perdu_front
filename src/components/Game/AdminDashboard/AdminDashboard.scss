@@ -1,0 +1,105 @@
+@use "src/styles/Variables.scss" as v;
+
+.adminPage {
+  background-color: v.$secondary-color;
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__headContainer {
+    &__headerAdmin {
+      align-items: center;
+      background-color: v.$lighter-color;
+      display: flex;
+      flex-direction: row;
+      height: 6em;
+      justify-content: space-between;
+      margin: 0;
+      width: 100%;
+
+      &__headTitle {
+        color: black;
+        margin-left: 2em;
+      }
+
+      &__headContainer {
+        background-color: v.$primary-color;
+        margin-right: 3em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        border-radius: 3em;
+        border-top: 1px solid grey;
+        border-left: 1px solid grey;
+        border-bottom: 1px solid grey;
+
+        &__deco {
+          color: black;
+        }
+      }
+    }
+    &__gestionTabs {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      &__players {
+        background-color: v.$primary-color;
+        padding-left: 8em;
+        padding-right: 8em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 3em;
+        border-bottom-right-radius: 3em;
+        border-top: 2px solid v.$lighter-color;
+        border-left: 2px solid v.$lighter-color;
+        border-bottom: 2px solid v.$lighter-color;
+      }
+      &__players:hover {
+        background-color: v.$complementary-color;
+      }
+      &__monsters {
+        background-color: v.$primary-color;
+        padding-left: 8em;
+        padding-right: 8em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 3em;
+        border-bottom-right-radius: 3em;
+        border-top: 2px solid v.$lighter-color;
+        border-left: 2px solid v.$lighter-color;
+        border-bottom: 2px solid v.$lighter-color;
+      }
+      &__monsters:hover {
+        background-color: v.$complementary-color;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+  }
+  &__footer {
+    background: v.$lighter-color;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 4em;
+    height: 4rem;
+  }
+}

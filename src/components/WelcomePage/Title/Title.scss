@@ -1,0 +1,35 @@
+@use "src/styles/Variables.scss" as v;
+
+.titleContainer {
+  background-color: v.$lighter-color;
+  border: 1px solid v.$border-color;
+  height: 7rem;
+  width: 30rem;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  padding-right: 3rem;
+  color: v.$text-color;
+}
+.logoTitle {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  display: flex;
+  align-items: center;
+}
+.logoTitle:hover {
+  filter: drop-shadow(0 0 0.5em v.$secondary-color);
+}
+.logoTitle.react:hover {
+  filter: drop-shadow(0 0 2em v.$secondary-color);
+}

@@ -1,0 +1,31 @@
+@use "src/styles/Variables.scss" as v;
+
+.home {
+  color: v.$primary-color;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  filter: drop-shadow(0 0 1em v.$text-color);
+  &__button {
+    background-color: v.$primary-color;
+    color: v.$text-color;
+  }
+  &__button:hover {
+    color: v.$primary-color;
+    background-color: v.$secondary-color;
+    border: 1px solid v.$border-color;
+  }
+}
+
+.titleGlow {
+  background-color: transparent;
+}
+.titleGlow:hover {
+  filter: drop-shadow(0 0 0.1em v.$secondary-color);
+}
+.titleGlow.react:hover {
+  filter: drop-shadow(0 0 2em v.$secondary-color);
+}

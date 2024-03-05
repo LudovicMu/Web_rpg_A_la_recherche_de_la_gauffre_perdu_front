@@ -1,0 +1,137 @@
+@use "src/styles/Variables.scss" as v;
+
+.userProfile {
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  color: v.$text-color;
+  display: flex;
+  flex-direction: column;
+
+  &__headerProfile {
+    align-items: center;
+    background-color: v.$lighter-color;
+    display: flex;
+    flex-direction: row;
+    height: 6em;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+
+    &__headTitle {
+      color: v.$text-color;
+      margin-left: 2em;
+    }
+    &__headContainer {
+      background-color: v.$primary-color;
+      color: v.$text-color;
+      margin-right: 3em;
+      padding-left: 4em;
+      padding-right: 4em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      border-radius: 3em;
+      border: 1px solid v.$border-color;
+    }
+    &__headContainer:hover {
+      background-color: v.$secondary-color;
+      color: v.$primary-color;
+    }
+  }
+  &__bodyProfile {
+    display: flex;
+    flex-direction: row;
+
+    &__leftSection {
+      background-color: v.$secondary-color;
+      border: 1px solid v.$border-color;
+      width: 25%;
+      height: 48.25em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      &__userIcon {
+        background-color: v.$primary-color;
+        width: 5em;
+        padding: 2em;
+        border-radius: 5em;
+        margin-top: 4em;
+      }
+
+      &__textDays {
+        color: v.$text-color;
+        padding-left: 3em;
+        padding-right: 3em;
+      }
+
+      &__deco {
+        margin-top: 8em;
+        margin-bottom: 2em;
+        background-color: v.$primary-color;
+        border: 1px solid v.$border-color;
+      }
+      &__deco:hover {
+        background-color: v.$border-color;
+        color: v.$primary-color;
+      }
+    }
+    &__rightSection {
+      background-color: v.$complementary-color;
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid v.$border-color;
+      border-right: 1px solid v.$border-color;
+      border-bottom: 1px solid v.$border-color;
+
+      &__titleProfile {
+        margin-top: 1em;
+        align-self: center;
+      }
+
+      &__infos {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-left: 2em;
+
+        &__dataTable {
+          &__Entries {
+            display: flex;
+            flex-direction: column;
+            height: 6em;
+            width: 25em;
+            background-color: v.$primary-color;
+            margin-bottom: 0.5em;
+
+            &__type {
+              margin: 0;
+              margin-bottom: 0.5em;
+            }
+            &__field {
+              background-color: v.$primary-color;
+              color: v.$border-color;
+
+              padding: 0.5em;
+              padding-left: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__footer {
+    background: v.$lighter-color;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 4em;
+
+    height: 4rem;
+  }
+}

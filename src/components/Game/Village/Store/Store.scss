@@ -1,0 +1,234 @@
+@use "src/styles/Variables.scss" as v;
+
+.popupShop {
+  z-index: 5;
+  background-image: url("/src/assets/shopInterior.jpg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: v.$secondary-color;
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  width: 80vw;
+  height: 90vh;
+  border: 1px solid v.$border-color;
+  display: flex;
+  flex-direction: row;
+
+  &__leftSide {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 50%;
+
+    &__returnTown {
+      background-color: v.$lighter-color;
+      color: v.$text-color;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 1em;
+      padding-top: 1.2em;
+      padding-bottom: 1.2em;
+      width: 17em;
+      border-radius: 0.75em;
+      border: 1px solid v.$border-color;
+    }
+    &__returnTown:hover {
+      background-color: v.$complementary-color;
+      transition-duration: 0.5s;
+    }
+    &__returnTown.react:hover {
+      background-color: v.$complementary-color;
+      transition-duration: 0.5s;
+    }
+
+    &__imageMerchant {
+      width: 100%;
+    }
+  }
+
+  &__rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+
+    &__headShop {
+      margin-top: 1em;
+      background-color: v.$lighter-color;
+      border: 1px solid v.$border-color;
+      font-size: 2em;
+      padding: 1em;
+      width: 10em;
+      border-radius: 5em;
+    }
+
+    &__articlesShop {
+      margin-top: 3em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &__items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 15em;
+        gap: 1em;
+
+        &__item01 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          &__imageItem {
+            background-color: v.$lighter-color;
+            width: 10em;
+            height: 10em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid v.$border-color;
+          }
+          &__price {
+            text-align: center;
+            color: v.$text-color;
+            background-color: v.$primary-color;
+            padding: 0.5em;
+            border: 1px solid v.$border-color;
+            border-radius: 2em;
+          }
+          &__price:hover {
+            background-color: v.$complementary-color;
+            transition-duration: 0.5s;
+          }
+          &__price.react:hover {
+            background-color: v.$complementary-color;
+            transition-duration: 0.5s;
+          }
+        }
+
+        &__item02 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          &__imageItem {
+            background-color: v.$lighter-color;
+            width: 10em;
+            height: 10em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid v.$border-color;
+          }
+          &__price {
+            text-align: center;
+            color: v.$text-color;
+            background-color: v.$primary-color;
+            padding: 0.5em;
+            border: 1px solid v.$border-color;
+            border-radius: 2em;
+          }
+          &__price:hover {
+            background-color: v.$complementary-color;
+            transition-duration: 0.5s;
+          }
+          &__price.react:hover {
+            background-color: v.$complementary-color;
+            transition-duration: 0.5s;
+          }
+        }
+
+        &__item03 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          &__imageItem {
+            background-color: v.$lighter-color;
+            width: 10em;
+            height: 10em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid v.$border-color;
+          }
+          &__price {
+            text-align: center;
+            color: v.$text-color;
+            background-color: v.$primary-color;
+            padding: 0.5em;
+            border: 1px solid v.$border-color;
+            border-radius: 2em;
+          }
+          &__price:hover {
+            background-color: v.$complementary-color;
+            transition-duration: 0.5s;
+          }
+          &__price.react:hover {
+            background-color: v.$complementary-color;
+            transition-duration: 0.5s;
+          }
+        }
+      }
+
+      &__scroll {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &__itemScroll {
+          background-color: v.$lighter-color;
+          width: 10em;
+          height: 10em;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          text-align: center;
+          border: 2px solid v.$border-color;
+          margin-bottom: 1em;
+        }
+        &__price {
+          text-align: center;
+          color: v.$text-color;
+          background-color: v.$primary-color;
+          padding: 0.5em;
+          border: 1px solid v.$border-color;
+          border-radius: 2em;
+        }
+        &__price:hover {
+          background-color: v.$complementary-color;
+          transition-duration: 0.5s;
+        }
+        &__price.react:hover {
+          background-color: v.$complementary-color;
+          transition-duration: 0.5s;
+        }
+      }
+    }
+
+    &__goldInStock {
+      text-align: center;
+      background-color: v.$primary-color;
+      width: 10em;
+      padding: 0.5em;
+      border: 1px solid v.$border-color;
+      border-radius: 3em;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+  }
+}

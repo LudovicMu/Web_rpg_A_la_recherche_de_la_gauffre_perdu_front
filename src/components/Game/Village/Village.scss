@@ -1,0 +1,97 @@
+@use "src/styles/Variables.scss" as v;
+
+.village {
+  background-image: url("/src/assets/village.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  color: v.$text-color;
+  margin-top: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__titlePage {
+    margin-top: 2.5em;
+    z-index: 2;
+    font-size: 2em;
+    background-color: v.$secondary-color;
+    width: 10em;
+    padding: 1em;
+    border-radius: 3em;
+    margin-left: 0.5em;
+    text-align: center;
+  }
+
+  &__otherPages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1em;
+
+    &__character {
+      border: 1px solid v.$border-color;
+      background-color: v.$primary-color;
+      width: 12em;
+      padding: 1em;
+      margin-right: 2em;
+      border-radius: 0.75em;
+    }
+    &__character:hover {
+      background-color: v.$secondary-color;
+      color: v.$primary-color;
+      transition-duration: 0.5s;
+    }
+    &__character.react:hover {
+      background-color: v.$secondary-color;
+      color: v.$primary-color;
+      transition-duration: 0.5s;
+    }
+    &__shop {
+      border: 1px solid v.$border-color;
+      background-color: v.$primary-color;
+      width: 12em;
+      padding: 1em;
+      margin-right: 2em;
+      border-radius: 0.75em;
+    }
+    &__shop:hover {
+      background-color: v.$secondary-color;
+      color: v.$primary-color;
+      transition-duration: 0.5s;
+    }
+    &__shop.react:hover {
+      background-color: v.$secondary-color;
+      color: v.$primary-color;
+      transition-duration: 0.5s;
+    }
+  }
+
+  &__goDungeon {
+    background-color: v.$primary-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    width: 20em;
+    border-radius: 0.75em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+  }
+  &__goDungeon:hover {
+    filter: drop-shadow(0 0 0.5em v.$secondary-color);
+    background-color: v.$secondary-color;
+    color: v.$primary-color;
+    transition-duration: 0.5s;
+  }
+  &__goDungeon.react:hover {
+    filter: drop-shadow(0 0 2em v.$secondary-color);
+    background-color: v.$secondary-color;
+    color: v.$primary-color;
+    transition-duration: 0.5s;
+  }
+}

@@ -1,0 +1,18 @@
+@use "src/styles/Variables.scss" as v;
+
+.creationTest {
+  color: black;
+  background-color: wheat;
+}
+.connectionTest {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  &__backButton {
+    background-color: v.$secondary-color;
+    color: black;
+  }
+}
